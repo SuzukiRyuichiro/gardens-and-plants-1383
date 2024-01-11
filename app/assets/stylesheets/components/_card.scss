@@ -43,6 +43,7 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .card-product img {
@@ -67,4 +68,28 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+.card-remove-link {
+  color: red;
+  border-radius: 50%;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  opacity: 0.3;
+  transform: rotate(45deg);
+  font-weight: lighter;
+  text-decoration: none;
+
+  &:hover {
+    color: red;
+    text-decoration: none;
+    opacity: 1;
+  }
 }

@@ -15,6 +15,15 @@ class PlantsController < ApplicationController
     # if not, render the show page, but with an error status
   end
 
+  def destroy
+    # find the plant to delete using the id from the params
+    @plant = Plant.find(params[:id])
+    # delete from the DB
+    @plant.destroy
+    # redirect the user to garden show
+    redirect_to garden_path(@plant.garden), status: :see_other
+  end
+
   private
 
   def plant_params

@@ -1,5 +1,5 @@
 class GardensController < ApplicationController
-  before_action :set_garden, only: %i[ show edit update destroy ]
+  before_action :set_garden, only: %i[ edit update destroy ]
 
   # GET /gardens or /gardens.json
   def index

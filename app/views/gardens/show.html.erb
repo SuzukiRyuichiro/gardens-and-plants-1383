@@ -5,14 +5,15 @@
 </div>
 <%# Display plants in the garden %>
 <div class="container">
-  <div class="row">
+  <div class="row mt-2">
     <div class="col-8">
       <%# iterate over plants in the garden and display in cards %>
       <% @garden.plants.each do |plant| %>
-        <div class="card-product mt-2">
+        <div class="card-product mb-2">
           <img src="<%= plant.image_url %>" />
           <div class="card-product-infos">
             <h2><%= plant.name %></h2>
+            <%= link_to "+", plant_path(plant), data: {turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: 'card-remove-link'  %>
           </div>
         </div>
       <% end %>

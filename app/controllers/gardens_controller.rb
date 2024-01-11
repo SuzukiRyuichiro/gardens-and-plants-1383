@@ -9,6 +9,7 @@ class GardensController < ApplicationController
   # GET /gardens/1 or /gardens/1.json
   def show
     @garden = Garden.find(params[:id])
+    @plant = Plant.new
   end
 
   # GET /gardens/new

@@ -3,3 +3,19 @@
     <h1><%= @garden.name %></h1>
   </div>
 </div>
+<%# Display plants in the garden %>
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <%# iterate over plants in the garden and display in cards %>
+      <% @garden.plants.each do |plant| %>
+        <div class="card-product mt-2">
+          <img src="<%= plant.image_url %>" />
+          <div class="card-product-infos">
+            <h2><%= plant.name %></h2>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
